@@ -2433,7 +2433,7 @@ void WorldSession::HandleCharFactionOrRaceChange(WorldPacket& recvData)
                 stmt->setFloat (3, -8867.68f);
                 stmt->setFloat (4, 673.373f);
                 stmt->setFloat (5, 97.9034f);
-                Player::SavePositionInDB(0, -8867.68f, 673.373f, 97.9034f, 0.0f, 1519, lowGuid);
+                //Player::SavePositionInDB(0, -8867.68f, 673.373f, 97.9034f, 0.0f, 1519, lowGuid);
             }
             else
             {
@@ -2442,7 +2442,7 @@ void WorldSession::HandleCharFactionOrRaceChange(WorldPacket& recvData)
                 stmt->setFloat (3, 1633.33f);
                 stmt->setFloat (4, -4439.11f);
                 stmt->setFloat (5, 15.7588f);
-                Player::SavePositionInDB(1, 1633.33f, -4439.11f, 15.7588f, 0.0f, 1637, lowGuid);
+                //Player::SavePositionInDB(1, 1633.33f, -4439.11f, 15.7588f, 0.0f, 1637, lowGuid);
             }
             trans->Append(stmt);
 
@@ -2482,9 +2482,9 @@ void WorldSession::HandleCharFactionOrRaceChange(WorldPacket& recvData)
             }
 
             // Delete all current quests
-            stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_CHAR_QUESTSTATUS);
-            stmt->setUInt32(0, GUID_LOPART(guid));
-            trans->Append(stmt);
+            //stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_CHAR_QUESTSTATUS);
+            //stmt->setUInt32(0, GUID_LOPART(guid));
+            //trans->Append(stmt);
 
             // Quest conversion
             for (std::map<uint32, uint32>::const_iterator it = sObjectMgr->FactionChangeQuests.begin(); it != sObjectMgr->FactionChangeQuests.end(); ++it)
