@@ -2208,8 +2208,8 @@ void WorldSession::HandleCharFactionOrRaceChange(WorldPacket& recvData)
         }
     }
 
-    // prevent character rename to invalid name
-    if (!normalizePlayerName(newname))
+    // prevent character rename to anything other than their existing name
+    if (newname != playerData->name)
     {
         WorldPacket data(SMSG_CHAR_FACTION_CHANGE, 1);
         data << uint8(CHAR_NAME_NO_NAME);
@@ -2252,7 +2252,7 @@ void WorldSession::HandleCharFactionOrRaceChange(WorldPacket& recvData)
     SQLTransaction trans = CharacterDatabase.BeginTransaction();
 
     stmt = CharacterDatabase.GetPreparedStatement(CHAR_UPD_FACTION_OR_RACE);
-    stmt->setString(0, newname);
+    stmt->setString(0, playerData->name);
     stmt->setUInt8(1, race);
     stmt->setUInt16(2, used_loginFlag);
     stmt->setUInt32(3, lowGuid);
