@@ -2423,27 +2423,15 @@ void WorldSession::HandleCharFactionOrRaceChange(WorldPacket& recvData)
             stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_PLAYER_HOMEBIND);
             stmt->setUInt32(0, lowGuid);
             trans->Append(stmt);
-
+            
+            // Set hearthstone to neutral Dalaran inn keeper
             stmt = CharacterDatabase.GetPreparedStatement(CHAR_INS_PLAYER_HOMEBIND);
-            stmt->setUInt32(0, lowGuid);
-            if (team == TEAM_ALLIANCE)
-            {
-                stmt->setUInt16(1, 0);
-                stmt->setUInt16(2, 1519);
-                stmt->setFloat (3, -8867.68f);
-                stmt->setFloat (4, 673.373f);
-                stmt->setFloat (5, 97.9034f);
-                //Player::SavePositionInDB(0, -8867.68f, 673.373f, 97.9034f, 0.0f, 1519, lowGuid);
-            }
-            else
-            {
-                stmt->setUInt16(1, 1);
-                stmt->setUInt16(2, 1637);
-                stmt->setFloat (3, 1633.33f);
-                stmt->setFloat (4, -4439.11f);
-                stmt->setFloat (5, 15.7588f);
-                //Player::SavePositionInDB(1, 1633.33f, -4439.11f, 15.7588f, 0.0f, 1637, lowGuid);
-            }
+            stmt->setUInt32(0, lowGuid);            
+            stmt->setUInt16(1, 571);
+            stmt->setUInt16(2, 4395);
+            stmt->setFloat (3, 5849.95f);
+            stmt->setFloat (4, 637.53f);
+            stmt->setFloat (5, 647.513f);
             trans->Append(stmt);
 
             // Achievement conversion
