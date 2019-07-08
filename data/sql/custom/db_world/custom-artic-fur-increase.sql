@@ -1,0 +1,18 @@
+USE `world`;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70200 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70201 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70202 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70203 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70204 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70205 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70206 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70207 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70208 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70209 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70210 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70211 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70212 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70213 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 70215 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 32517 AND `item` = 44128;
+UPDATE `skinning_loot_template` SET `Chance` = 4 WHERE `entry` = 28860 AND `item` = 44128;
